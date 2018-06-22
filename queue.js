@@ -6,7 +6,7 @@ class _Node {
   }
 }
 
-class Queue {
+module.exports = class Queue {
   constructor() {
     this.first = null
     this.last = null
@@ -34,4 +34,19 @@ class Queue {
 
     return node.value
   }
+}
+
+const main = () => {
+  const startTrekQ = new Queue()
+  startTrekQ.enqueue('Kirk')
+  startTrekQ.enqueue('Spock')
+  startTrekQ.enqueue('Uhura')
+  startTrekQ.enqueue('Sulu')
+  startTrekQ.enqueue('Checkov')
+
+  console.log(startTrekQ)
+}
+
+if (require.main === module) {
+  main()
 }
